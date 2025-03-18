@@ -1,0 +1,146 @@
+El programador sigue teniendo complicaciones para ajustar su código cuando ingresan valores, pero necesita ayuda, ahora su jefe, que no conoce mucho de programación, quiere un programa para calcular los rendimientos de 4 vendedores y ver la diferencia entre estos.
+
+El programa debe recibir los 4 valores de los vendedores, que se calcula en ventas por mes, después, el programa debe ordenarlos de menor a mayor, siendo 4 el mayor y 1 el menor, una vez hecho esto debe hacer las siguientes operaciones.
+
+Mostrar los números ordenados
+El resultado del 4 menos el 1
+El resultado del 2 menos el 1
+El resultado del 4 menos el 3
+El resultado del 3 menos el 2
+La suma de todas las ventas y el promedio general
+
+Algoritmo vendors
+	Escribir 'Valor del vendedor 1'
+	Leer v1
+	Escribir 'Valor del vendedor 2'
+	Leer v2
+	Escribir 'Valor del vendedor 3'
+	Leer v3
+	Escribir 'Valor del vendedor 4'
+	Leer v4
+	
+	p1=v1
+	p2=v2
+	p3=v3
+	p4=v4
+	
+	Si v1<v2 y v1<v3 y v1<v4 Entonces
+		p1=v1
+		Escribir "El vendedor 1 es menor"
+	SiNo
+		Si v2<v1 y v2<v3 y v2<v4 Entonces
+			p1=v2
+			Escribir "El vendedor 2 es menor"
+		SiNo
+			Si v3<v1 y v3<v2 y v3<v4 Entonces
+				p1=v3
+				Escribir "El vendedor 3 es menor"
+			SiNo
+				Si v4<v1 y v4<v2 y v4<v3 Entonces
+					p1=v4
+					Escribir "El vendedor 4 es menor"
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+	
+	Si v1>v2 y v1<v3 Entonces
+		p2=v1
+		Escribir "El vendedor 1 es segundo"
+	SiNo
+		Si v2>v1 y v2<v3 Entonces
+			p2=v2
+			Escribir "El vendedor 2 es segundo"
+		SiNo
+			Si v3>v1 y v3<v2 Entonces
+				p2=v3
+				Escribir "El vendedor 3 es segundo"
+			SiNo
+				Si v4>v1 y v4<v2 Entonces
+					p2=v4
+					Escribir "El vendedor 4 es segundo"
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+	
+	Si v1>v3 y v1<v4 Entonces
+		p3=v1
+		Escribir "El vendedor 1 es tercero"
+	SiNo
+		Si v2>v3 y v2<v4 Entonces
+			p3=v2 
+			Escribir "El vendedor 2 es tercero"
+		SiNo
+			Si v3>v2 y v3<v4 Entonces
+				p3=v3
+				Escribir "El vendedor 3 es tercero"
+			SiNo
+				Si v4>v2 y v4<v3 Entonces
+					p3=v4
+					Escribir "El vendedor 4 es tercero"
+				FinSi
+				
+			FinSi
+		FinSi
+	FinSi
+	
+	Si v1>v2 y v1>v3 y v1>v4 Entonces
+		p4=v1 
+		Escribir "El vendedor 1 es mayor"
+	SiNo
+		Si v2>v1 y v2>v3 y v2>v4 Entonces
+			p4=v2
+			Escribir "El vendedor 2 es mayor"
+		SiNo
+			Si v3>v1 y v3>v2 y v3>v4 Entonces
+				p4=v3
+				Escribir "El vendedor 3 es mayor"
+			SiNo
+				Si v4>v1 y v4>v2 y v4>v3 Entonces
+					p4=v4 
+					Escribir "El vendedor 4 es mayor"
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+	
+		//Calculos
+		r1 <- v4 - v1
+		r2 <- v2 - v1
+		r3 <- v4 - v3
+		r4 <- v3 - v2
+		suma_ventas <- r1 + r2 + r3 + r4
+		prmd_gnrl <- suma_ventas / 4
+		
+		//mostrar resultados
+		Escribir "Mostrar los numeros en orden ascendente son: ","menor posición- ", p1, ", 2da posición- ", p2, ", 3ra posición- ", p3, ", mayor posición- ",p4
+		Escribir "Mostrar primer resultado: ", r1
+		Escribir "Mostrar segundo resultado: ", r2
+		Escribir "Mostrar tercer resultado: ", r3
+		Escribir "Mostrar cuarto resultado: ", r4
+		Escribir "Mostrar suma de las ventas: ", suma_ventas
+		Escribir "Mostrar el promedio general: ", prmd_gnrl
+		
+FinAlgoritmo
+
+*** Ejecución Iniciada. ***
+Valor del vendedor 1
+> 2
+Valor del vendedor 2
+> 3
+Valor del vendedor 3
+> 1
+Valor del vendedor 4
+> 4
+El vendedor 3 es menor
+El vendedor 1 es tercero
+El vendedor 4 es mayor
+Mostrar los numeros en orden ascendente son: menor posición- 1, 2da posición- 3, 3ra posición- 2, mayor posición- 4
+Mostrar primer resultado: 2
+Mostrar segundo resultado: 1
+Mostrar tercer resultado: 3
+Mostrar cuarto resultado: -2
+Mostrar suma de las ventas: 4
+Mostrar el promedio general: 1
+*** Ejecución Finalizada. ***
