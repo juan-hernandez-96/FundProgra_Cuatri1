@@ -1,0 +1,62 @@
+Realiza un pseudocódigo que calcule el promedio de un alumno, el usuario ingresará su nombre y edad, después deberá ingresar sus 3 instrumentos, examen que vale el 30%, tareas que vale el 20% y trabajos en clase que vale el 50%, deberá calcular el promedio final.
+
+Usando operadores, deberá validar si el alumno aprobó con una calificación igual o mayor a 6.
+
+La respuesta debe mostrar el nombre del alumno, su edad, y el valor de cada instrumento, su promedio final, y mostrar si el alumno aprobó con un Verdadero o Falso.
+
+Algoritmo PromedioAlumno
+		// Declaración de variables
+		Escribir "Nombre Alumno"
+		Leer Nombre
+		Escribir "Edad alumno"
+		Leer Edad
+		Escribir  "Promedio Examen 0 a 10"
+		Leer Promedio_Examen
+		Escribir "Promedio Tarea 0 a 10"
+		Leer Promedio_Tarea
+		Escribir "Promedio Trabajos 0 a 10"
+		Leer Promedio_Trabajos
+		
+		//Calcular promedios
+		Promedio_Examen <- (Promedio_Examen * .30)
+		Promedio_Tarea <- (Promedio_Tarea * .20)
+		Promedio_Trabajos <- (Promedio_Trabajos * .50)
+		Promedio_Final <- (Promedio_Examen + Promedio_Tarea + Promedio_Trabajos)
+		
+		//Mostrar Resultados
+		Escribir "Nombre Alumno " Nombre 
+		Escribir "Edad Alumno " Edad
+		Escribir "Promedio Examen " Promedio_Examen
+		Escribir "Promedio Tarea " Promedio_Tarea
+		Escribir "Promedio Trabajos " Promedio_Trabajos
+		Escribir "Promedio Final " Promedio_Final	
+		Escribir "¿Promedio es mayor a 6? ", Promedio_Final ," > ", 6 ,"= ",Promedio_Final>6 
+		Si Promedio_Final > 6 Entonces
+			Escribir  "Aprobado."
+		SiNo
+			Escribir "Reprobado."
+		FinSi
+		
+		
+FinAlgoritmo
+
+*** Ejecución Iniciada. ***
+Nombre Alumno
+> Juan
+Edad alumno
+> 19
+Promedio Examen 0 a 10
+> 9.5
+Promedio Tarea 0 a 10
+> 9.5
+Promedio Trabajos 0 a 10
+> 9.5
+Nombre Alumno Juan
+Edad Alumno 19
+Promedio Examen 2.85
+Promedio Tarea 1.9
+Promedio Trabajos 4.75
+Promedio Final 9.5
+¿Promedio es mayor a 6? 9.5 > 6= VERDADERO
+Aprobado.
+*** Ejecución Finalizada. ***
