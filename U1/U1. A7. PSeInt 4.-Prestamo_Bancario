@@ -1,0 +1,69 @@
+Un banco necesita realizar un sistema de evaluación preliminar para otorgar un crédito, a fin de mejorar el tiempo de validación y que los potenciales clientes puedan saber de manera más rápido a quiénes se les pudiera otorgar un crédito.
+
+De acuerdo a la última reunión innecesaria, a las 6:00 p.m. un día sábado, se presentaron las siguientes condicionales.
+
+El prospecto debe tener al menos 21 años de edad, debe tener un ingreso de al menos 8,500 mensuales, debe tener al menos 5 años de historial crediticio y dicho historial crediticio deberá ser positivo, es decir, que siempre han pagado a tiempo, finalmente, el monto del crédito deberá ser de al menos $10,000.
+
+Después de una discusión acalorada donde la Lic. Petra comenzó a llorar defendiendo a la gente de bajos recursos, se llegó al siguiente acuerdo, fue horrible, la reunión terminó a las 9:00 p.m., pero al final, todos abrazaron a la Lic. Petra y oraron por ella, hubo galletas y café para todos. Se llegaron a los siguientes acuerdos.
+
+El prospecto deberá tener al menos 18 años de edad, con un ingreso de al menos $4,000 al mes, deberá tener al menos 2 años trabajando, ya no se revisará su historial crediticio y se estableció a que el préstamo máximo sería de máximo un 15% del salario mensual del prospecto multiplicado por 12 mensualidades. Adicionalmente, si el prospecto tiene al menos $10,000 de saldo en su cuenta de banco o si el préstamo es para una cuestión médica, su crédito será aprobado automáticamente.
+
+El reporte deberá mostrar la edad del prospecto, su ingreso mensual, de cuánto sería el monto máximo del préstamo y su crédito será aprobado o no.
+
+Algoritmo PrestamoBancario
+	Definir edad Como Entero
+	Definir ingreso_mensual, años_trabajando, prestamo_maximo, saldo Como Real
+	Definir cuestion_medica Como Logico
+	
+	Escribir "Ingrese su edad:"
+	Leer edad
+	Escribir "Su ingreso mensual es:"
+	Leer ingreso_mensual
+	Escribir "Años trabajando:"
+	Leer años_trabajando
+	Escribir "Su saldo actual es:"
+	Leer saldo
+	Escribir "¿Requiere un prestamo para cuestion medica? (1 = Sí, 0 = No):"
+	Leer cuestion_medica
+	
+	c1 = edad >= 18
+	c2 = ingreso_mensual >= 4000
+	c3 = años_trabajando >= 2
+	c4 = saldo >= 10000
+	
+	prestamo <- ((ingreso_mensual * .15) * 12)
+	
+	Escribir c1
+	Escribir c2
+	Escribir c3
+	Escribir c4
+	Escribir cuestion_medica
+	
+	prestamo_aplicable <- (c1) Y (c2) Y (c3) Y (c4) O cuestion_medica
+	Escribir "Edad del prospecto a prestamo: ", edad, " años."
+	Escribir "El sueldo del prospecto es de: ", ingreso_mensual, " pesos mensuales." 
+	Escribir "Su prestamo es de: ", prestamo, " pesos."
+	Escribir "Tiene derecho a prestamo: ", prestamo_aplicable
+FinAlgoritmo
+
+*** Ejecución Iniciada. ***
+Ingrese su edad:
+> 25
+Su ingreso mensual es:
+> 6500
+Años trabajando:
+>
+Su saldo actual es:
+> 11000
+¿Requiere un prestamo para cuestion medica? (1 = Sí, 0 = No):
+> 1
+VERDADERO
+VERDADERO
+FALSO
+VERDADERO
+VERDADERO
+Edad del prospecto a prestamo: 25 años.
+El sueldo del prospecto es de: 6500 pesos mensuales.
+Su prestamo es de: 11700 pesos.
+Tiene derecho a prestamo: VERDADERO
+*** Ejecución Finalizada. ***
