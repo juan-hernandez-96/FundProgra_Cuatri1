@@ -1,0 +1,108 @@
+La abarrotera "Kamarena" necesita trabajar en un sistema que le ayude a registrar de manera fácil y rápida todos sus pedidos, hubo una explosión en el mercado al otro lado de la ciudad y ellos han quedado como el único lugar disponible para comprar, esa idea de poner una bomba ha salido terriblemente bien (no hubo ningún herido).
+
+Mientras el dueño sigue luchando entre entregarse a las autoridades por lo sucedido y pedir perdón a las familias involucradas, ha pedido a su asesor externo, el "Teclas" que le ayude con un sistema.
+
+Para ingresar al sistema debe pedir una contraseña (Mientras), que debe ser una fecha de nacimiento en formato YYYY-MM-DD, una vez en el sistema, debe preguntar si (Si) quiere hacer registros de zanahorias o de tomates.
+
+Si elige zanahorias, deberá pedir que se ingresen cuántas cajas deberá ingresar (Para), como cada caja tiene un valor diferente, habrá que ingresarlo manualmente una por una.
+
+Si elige tomates, deberá ingresar cuantas cajas se necesiten y cuando escriba el número 100001 deberá terminar de registrar (Mientras).
+
+En ambos casos, deberá qué opción se eligió y mostrar cuántas cajas se añadieron, cuánto fue el total del peso y cuánto fue el costo total de esa venta, las zanahorias cuestan $15.84 el kilo y los tomates cuestan $11.34 el kilo, si (Si) la venta supera los $10,000, se le hará un descuento automático del 7.5% del valor total.
+
+Finalmente, deberá preguntar si (Si) el cliente necesita o no envío, si requiere envío deberá añadir $150 más a su pedido, de lo contrario, mostrará el precio anterior.
+
+Algoritmo Abarrotera_Kamarena
+	Escribir "Introduce la contraseña: "
+	Leer c
+	
+	Mientras c <> "89-11-26" Hacer
+		Escribir "ERROR Contraseña no valida!!. Favor de ingresar la contraseña correcta"
+		Leer c
+	FinMientras
+	Escribir "Acceso concedido, favor de continuar"
+	
+	Escribir "¿Deseas hacer registro de zanahorias o de tomates? Escribe 1 para zanahorias y 2 para tomates: "
+	Leer menu
+	
+
+	Si menu = 1 Entonces
+		Escribir "¿Cuantas cajas de zanahorias deseas registrar?: "
+		Leer n
+		Para i <- 1 Hasta n Hacer
+			Escribir "Registra las cajas: "
+			Leer cjs
+			Escribir "Costo de las cajas por kilo: "
+			Leer cst
+			total <- cst + total
+		FinPara
+		tt <- total * 15.84
+		Escribir "Cajas añadidas: ", cjs
+		Escribir "El total de la venta es: ", tt
+		
+	FinSi
+	
+	Si menu = 2 Entonces
+		Escribir  "Ingrese la cantidad de cajas a registrar (para terminar escriba 100001)"
+		Leer cjs
+		Mientras cj <> 100001 Hacer
+				Escribir "Costo de cajas por kilo: " 
+				Leer cst
+			total <- cst + total
+		FinMientras
+		tt <- total * 11.34
+		Escribir "Cajas añadidas: ", cj
+		Escribir "El total de la venta es: ", total
+	FinSi
+	
+	Si tt > 10000 Entonces
+		descuento <- tt * .075
+		Escribir "Usted tiene un descuento del %7.5 a su favor, total: ", descuento
+	FinSi
+	
+	Escribir "¿El cliente necesita que se le envie su compra? Escribe 1 para si y 2 para no: "
+	Leer en
+	
+	descuento <- envio
+	Si en = 1 Entonces
+		Escribir "Se requiere un pago extra de $150.00."
+		envio <- tt + 150
+		Escribir "Costo con envio: ", envio
+	SiNo
+		Si en = 2 Entonces
+			Escribir "No se requiere pagar $150.00 extra de envio."
+			Escribir "Costo total: ", tt
+		FinSi
+	FinSi
+	
+	
+FinAlgoritmo
+
+*** Ejecución Iniciada. ***
+Introduce la contraseña:
+> 89-11-26
+Acceso concedido, favor de continuar
+¿Deseas hacer registro de zanahorias o de tomates? Escribe 1 para zanahorias y 2 para tomates:
+> 1
+¿Cuantas cajas de zanahorias deseas registrar?:
+> 3
+Registra las cajas:
+> 1
+Costo de las cajas por kilo:
+> 3234
+Registra las cajas:
+> 2
+Costo de las cajas por kilo:
+> 3445
+Registra las cajas:
+> 3
+Costo de las cajas por kilo:
+> 5355
+Cajas añadidas: 3
+El total de la venta es: 190618.56
+Usted tiene un descuento del %7.5 a su favor, total: 14296.392
+¿El cliente necesita que se le envie su compra? Escribe 1 para si y 2 para no:
+> 2
+No se requiere pagar $150.00 extra de envio.
+Costo total: 190618.56
+*** Ejecución Finalizada. ***
