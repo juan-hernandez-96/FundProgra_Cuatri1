@@ -1,0 +1,21 @@
+Algoritmo area_sombreada_roja
+	Escribir 'Radio de circulo'
+	Leer R
+	Escribir 'Hipotenusa del triangulo'
+	Leer H
+	
+	//Calculos
+	area_circulo_chico <- ((3.1416)*(R/2)^2)
+	area_mitad_circulo <- (area_circulo_chico/2)
+	area_circulo_grande <- ((3.1416)*(R)^2)
+	area_circulo_cuarto <- (area_circulo_grande/4)
+	base_triangulo <- (R*2)
+	altura_triangulo <- raiz((H)^2-(R)^2)
+	area_triangulo <- (base_triangulo*altura_triangulo)/2
+	area_sombreada <- (area_triangulo+area_circulo_cuarto-area_mitad_circulo)
+	
+	//Mostrar resultados
+	Escribir 'Area de la figura sombreada roja en m^2 igual a ',area_sombreada
+	
+	
+FinAlgoritmo
