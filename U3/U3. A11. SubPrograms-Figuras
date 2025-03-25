@@ -1,0 +1,52 @@
+Diseña un algoritmo que emplee subprogramas / funciones / subprocesos, para calcular el área y volumen de 3 figuras geométricas diferentes. 
+
+El usuario debe poder elegir cuál figura desea calcular y mostrar sus resultados, el programa debe poder repetirse si el usuario lo desea y elegir otra opción.
+
+SubProceso lista()
+	Escribir "1- Cubo"
+	Escribir "2- Pirámide"
+	Escribir "3- Cilindro"
+	Escribir "";
+FinSubProceso
+
+SubProceso cálculos()
+	leer fig
+	Si fig = 1 Entonces
+		Escribir "Ingrese el valor de un lado: "
+		Leer l1
+		vol <- l1^3
+		Escribir "El volumen de la figura es: ", vol
+		ar <- 6*l1^2
+		Escribir "El area de la figura es: ", ar
+	SiNo
+		si fig = 2 Entonces
+			Escribir "Ingrese el valor de la base: "
+			Leer b
+			Escribir "Ingrese el valor de la altura: "
+			Leer h
+			Escribir "Ingrese el valor de un lado: "
+			Leer l1
+			ab <- b^2
+			vol <- (ab*h)/3
+			Escribir "El volumen de la figura es: ", vol
+		SiNo
+			Si fig = 3 Entonces
+				Escribir "Ingrese el valor de la base: "
+				Leer b
+				Escribir "Ingrese el valor de la altura: "
+				Leer h
+				r<-b/2
+				ar <- 2*3.14*r*(h+r)
+				Escribir "El área de la figura es: ", ar
+				vol<-3.14*(r^2)*h
+				Escribir "El volumen de la figura es: ", vol
+			FinSi
+		FinSi
+	FinSi
+FinSubProceso
+
+Algoritmo FigGeo
+	Escribir "Datos de las figuras: "
+	lista()
+	cálculos()
+FinAlgoritmo
