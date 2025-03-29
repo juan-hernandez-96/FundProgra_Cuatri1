@@ -12,8 +12,8 @@
 
 ***Descripción breve de la materia:*** La intención de la materia consistió en enseñarnos conceptos y herramientas básicas que se necesitan para la carrera de programación. Fue un vistazo a la punta del iceberg sobre el mundo informático. Todo utilizando el programa PSeInt como entorno para la escritura de pseudocódigos.
 
-**Unidad 1**
-***Descripción breve de la unidad:*** En esta primera unidad se vieron los conceptos más básicos de la programación, empezando con las variables necesarias, la estructura de un pseudocódigo; las partes que lo componen, además de ayudar a comprender como utilizar los datos que ofrece un problema o situación cotidiana para crear un código que ayude a resolverlo. Aquí también se hizo uso de formulas matemáticas básicas.
+**Unidad 1**\
+***Descripción breve de la unidad:*** En esta primera unidad se vieron los conceptos más básicos de la programación, empezando con las variables necesarias, la estructura de un pseudocódigo; las partes que lo componen, además de ayudar a comprender como utilizar los datos que ofrece un problema o situación cotidiana para crear un código que ayude a resolverlo. Aquí también se hizo uso de formulas matemáticas básicas.\
 [Repositorio- Unidad 1](https://github.com/juan-hernandez-96/FundProgra_Cuatri1/tree/main/U1)
 
 **Unidad 2**
